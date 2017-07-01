@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Loginand Register</string>
+    <string name="title_activity_main">LoginandRegister</string>
+    <string name="RegisterHere"><u>Register Here</u></string>
+    <string name="forgotpassword"><u>Forgot Password</u></string>
+    <string name="title_activity_login">login</string>
+    <string name="username">Username</string>
+
+</resources>
