@@ -10,15 +10,14 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class forgetpassword extends AppCompatActivity {
+public class Forgetpassword extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.forgetpass);
-        EditText et3=(EditText)findViewById(R.id.email);
-
-        TextView txt3=(TextView)findViewById(R.id.textView5);
+        EditText email=(EditText)findViewById(R.id.email);
+        TextView forgotpasstext=(TextView)findViewById(R.id.forgotpass);
 
     }
 }

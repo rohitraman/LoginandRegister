@@ -19,13 +19,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".login"
+        <activity android:name=".Login"
                   android:label="login"
             android:windowSoftInputMode="stateHidden|adjustResize"/>
         <activity android:name=".Register"
                   android:label="Register"
             android:windowSoftInputMode="adjustResize|stateHidden"/>
-        <activity android:name=".forgetpassword"
+        <activity android:name=".Forgetpassword"
             android:label="@string/forgotpassword"
             android:windowSoftInputMode="adjustResize|stateHidden"/>
     </application>

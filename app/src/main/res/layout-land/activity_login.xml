@@ -9,40 +9,39 @@
 <RelativeLayout
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical"
-    >
+    android:orientation="vertical">
 
     <EditText
 android:id="@+id/username"
 android:layout_width="1700px"
 android:layout_height="wrap_content"
-        android:ems="10"
+android:ems="10"
 android:hint="@string/username"
-        android:textColorHint="@color/White"
+android:textColorHint="@color/White"
 android:inputType="textPersonName"
-        android:backgroundTint="@color/White"
+android:backgroundTint="@color/White"
 android:textColor="@color/White"
-        android:layout_marginTop="56dp"
-        android:layout_below="@+id/textView4"
-        android:layout_centerHorizontal="true" />
+android:layout_marginTop="56dp"
+android:layout_below="@+id/logintext"
+android:layout_centerHorizontal="true" />
 
 <EditText
 android:id="@+id/password"
 android:layout_width="wrap_content"
 android:layout_height="wrap_content"
-    android:ems="10"
+android:ems="10"
 android:textColor="@color/White"
 android:textColorHint="@color/White"
 android:hint="Password"
 android:inputType="textPassword"
 android:visibility="visible"
 android:backgroundTint="@color/White"
-    android:layout_below="@+id/username"
-    android:layout_alignLeft="@+id/username"
-    android:layout_alignStart="@+id/username"
-    android:layout_marginTop="20dp"
-    android:layout_alignRight="@+id/username"
-    android:layout_alignEnd="@+id/username" />
+android:layout_below="@+id/username"
+android:layout_alignLeft="@+id/username"
+android:layout_alignStart="@+id/username"
+android:layout_marginTop="20dp"
+android:layout_alignRight="@+id/username"
+android:layout_alignEnd="@+id/username" />
 
     <Button
         android:id="@+id/login"
@@ -62,37 +61,37 @@ android:backgroundTint="@color/White"
 android:id="@+id/forgotpassword"
 android:layout_width="wrap_content"
 android:layout_height="wrap_content"
-    android:text="@string/forgotpassword"
+android:text="@string/forgotpassword"
 android:textColor="@color/White"
 android:textStyle="bold"
-    android:layout_marginTop="43dp"
-    android:layout_below="@+id/login"
-    android:layout_centerHorizontal="true" />
+android:layout_marginTop="43dp"
+android:layout_below="@+id/login"
+android:layout_centerHorizontal="true" />
 
 <TextView
-android:id="@+id/textView6"
+android:id="@+id/noaccount"
 android:layout_width="wrap_content"
 android:layout_height="wrap_content"
-    android:layout_marginTop="33dp"
+android:layout_marginTop="33dp"
 android:text="Don't have an account?"
 android:textStyle="italic"
 android:textColor="@color/White"
-    android:layout_below="@+id/forgotpassword"
-    android:layout_centerHorizontal="true" />
+android:layout_below="@+id/forgotpassword"
+android:layout_centerHorizontal="true" />
 
 <TextView
 android:id="@+id/register"
 android:layout_width="wrap_content"
 android:layout_height="wrap_content"
-    android:layout_marginTop="47dp"
+android:layout_marginTop="47dp"
 android:text="@string/RegisterHere"
 android:textStyle="bold"
 android:textColor="@color/White"
-    android:layout_below="@+id/textView6"
-    android:layout_centerHorizontal="true" />
+android:layout_below="@+id/noaccount"
+android:layout_centerHorizontal="true" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/logintext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="21dp"
