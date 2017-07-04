@@ -9,7 +9,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name=".Activity_Login"
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="adjustResize|stateHidden">
@@ -19,13 +19,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Login"
+        <activity android:name=".Activity_Welcome"
                   android:label="login"
             android:windowSoftInputMode="stateHidden|adjustResize"/>
-        <activity android:name=".Register"
+        <activity android:name=".Activity_Register"
                   android:label="Register"
             android:windowSoftInputMode="adjustResize|stateHidden"/>
-        <activity android:name=".Forgetpassword"
+        <activity android:name=".Activity_ForgetPassword"
             android:label="@string/forgotpassword"
             android:windowSoftInputMode="adjustResize|stateHidden"/>
     </application>
