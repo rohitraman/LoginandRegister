@@ -1,0 +1,71 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity_View_Details"
+    android:background="@drawable/download">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <TextView
+        android:id="@+id/tv_viewdetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:text="View Details"
+        android:textColor="@color/White"
+        android:textSize="50dp"
+        android:textStyle="bold|italic" />
+
+    <TextView
+        android:id="@+id/tv_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_viewdetails"
+        android:layout_alignStart="@+id/tv_viewdetails"
+        android:layout_below="@+id/tv_viewdetails"
+        android:layout_marginTop="58dp"
+        android:text="UserName:"
+        android:textColor="@color/White"
+        android:textSize="25dp"
+        tools:textStyle="bold|italic" />
+
+    <TextView
+        android:id="@+id/tv_showusername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_username"
+        android:layout_alignEnd="@+id/tv_viewdetails"
+        android:layout_alignRight="@+id/tv_viewdetails"
+        android:text="vader"
+        android:textColor="@color/White"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/tv_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_username"
+        android:layout_alignStart="@+id/tv_username"
+        android:layout_below="@+id/tv_username"
+        android:layout_marginTop="46dp"
+        android:text="Password:"
+        android:textColor="@color/White"
+        android:textSize="25dp"
+        tools:textStyle="bold|italic" />
+
+    <TextView
+        android:id="@+id/tv_showpassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_showusername"
+        android:layout_alignStart="@+id/tv_showusername"
+        android:layout_alignTop="@+id/tv_password"
+        android:text="123"
+        android:textColor="@color/White"
+        android:textSize="20dp" />
+
+</RelativeLayout>
