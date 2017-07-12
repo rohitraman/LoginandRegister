@@ -18,14 +18,17 @@ public class Activity_View_Details extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-
-        Log.v("Message","LOL");
         View rootView= inflater.inflate(R.layout.fragment_activity_view_details, container, false);
         TextView tvViewDetailsPassword=(TextView)rootView.findViewById(R.id.tv_password);
         TextView tvViewDetailsUsername=(TextView)rootView.findViewById(R.id.tv_username);
         TextView tvViewDetails=(TextView)rootView.findViewById(R.id.tv_viewdetails);
+        Bundle bundle=getArguments();
+        String username=bundle.getString("Username");
+        String password=bundle.getString("Password");
         TextView tvUsername=(TextView)rootView.findViewById(R.id.tv_showusername);
         TextView tvPassword=(TextView)rootView.findViewById(R.id.tv_showpassword);
+        tvUsername.setText(username);
+        tvPassword.setText(password);
         return rootView;
     }
 

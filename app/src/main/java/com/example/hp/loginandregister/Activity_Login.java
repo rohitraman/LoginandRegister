@@ -2,6 +2,7 @@ package com.example.hp.loginandregister;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -12,11 +13,11 @@ import android.widget.Toast;
 
 public class Activity_Login extends AppCompatActivity {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
         final EditText etUsername = (EditText) findViewById(R.id.et_username);
         final EditText etPassword = (EditText) findViewById(R.id.et_password);
         final TextView tvLogintext = (TextView) findViewById(R.id.tv_logintext);
@@ -41,11 +42,16 @@ public class Activity_Login extends AppCompatActivity {
 
         username = username1;
         password = password1;
+
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (etUsername.getText().toString().equals(username) && etPassword.getText().toString().equals(password)) {
                     Intent login = new Intent(Activity_Login.this, Activity_Welcome.class);
+                    Bundle bundle1=new Bundle();
+                    bundle1.putString("Username",username);
+                    bundle1.putString("Password",password);
+                   login.putExtras(bundle1);
                     startActivity(login);
                     Toast.makeText(getApplicationContext(),"Hello Admin",Toast.LENGTH_LONG).show();
                     finish();

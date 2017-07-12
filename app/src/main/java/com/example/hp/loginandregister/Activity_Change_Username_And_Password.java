@@ -43,8 +43,6 @@ public class Activity_Change_Username_And_Password extends Fragment {
 
             }
         });
-
-
         return rootView;
 
     }
