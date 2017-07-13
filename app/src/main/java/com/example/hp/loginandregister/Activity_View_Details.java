@@ -1,6 +1,8 @@
 package com.example.hp.loginandregister;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -22,9 +24,9 @@ public class Activity_View_Details extends Fragment {
         TextView tvViewDetailsPassword=(TextView)rootView.findViewById(R.id.tv_password);
         TextView tvViewDetailsUsername=(TextView)rootView.findViewById(R.id.tv_username);
         TextView tvViewDetails=(TextView)rootView.findViewById(R.id.tv_viewdetails);
-        Bundle bundle=getArguments();
-        String username=bundle.getString("Username");
-        String password=bundle.getString("Password");
+        SharedPreferences sharedPreferences=getActivity().getSharedPreferences("Details", Context.MODE_PRIVATE);
+        String username=sharedPreferences.getString("username","");
+        String password=sharedPreferences.getString("password","");
         TextView tvUsername=(TextView)rootView.findViewById(R.id.tv_showusername);
         TextView tvPassword=(TextView)rootView.findViewById(R.id.tv_showpassword);
         tvUsername.setText(username);

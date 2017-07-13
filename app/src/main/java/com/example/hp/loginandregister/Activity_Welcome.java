@@ -62,11 +62,12 @@ public class Activity_Welcome extends AppCompatActivity
         if (id == R.id.nav_view_details) {
             // Handle the camera action
             FragmentManager fragmentManager=getSupportFragmentManager();
-            fragmentManager.beginTransaction().replace(R.id.fragment,CustomFragment()).commit();
+            fragmentManager.beginTransaction().replace(R.id.fragment,new Activity_View_Details()).commit();
         }
         else if (id == R.id.nav_change_details) {
             FragmentManager fragmentManager=getSupportFragmentManager();
             fragmentManager.beginTransaction().replace(R.id.fragment,new Activity_Change_Username_And_Password()).commit();
+
         }
         else if (id == R.id.nav_logout) {
             AlertDialog.Builder alertDialogBuilder=new AlertDialog.Builder(this);
@@ -94,16 +95,6 @@ public class Activity_Welcome extends AppCompatActivity
         return true;
 
     }
-    public Fragment CustomFragment()
-    {
-        Bundle bundle=getIntent().getExtras();
-        String username=bundle.getString("Username");
-        String password=bundle.getString("Password");
-        bundle.putString("Username",username);
-        bundle.putString("Password",password);
-        Activity_View_Details activityViewDetails=new Activity_View_Details();
-        activityViewDetails.setArguments(bundle);
-        return activityViewDetails;
-    }
+
 
 }

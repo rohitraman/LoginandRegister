@@ -1,7 +1,9 @@
 package com.example.hp.loginandregister;
 
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -37,10 +39,12 @@ public class Activity_Change_Username_And_Password extends Fragment {
             public void onClick(View v) {
 
                 Intent intent=new Intent(getActivity(),Activity_Login.class);
-                intent.putExtra("ChangeUsername",etChangeUsername.getText().toString());
-                intent.putExtra("ChangePassword",etChangePassword.getText().toString());
+                SharedPreferences sharedPreferences=getActivity().getSharedPreferences("Details", Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor=sharedPreferences.edit();
+                editor.putString("username",etChangeUsername.getText().toString());
+                editor.putString("password",etChangePassword.getText().toString());
+                editor.apply();
                 getActivity().startActivity(intent);
-
             }
         });
         return rootView;

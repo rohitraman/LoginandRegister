@@ -1,6 +1,8 @@
 package com.example.hp.loginandregister;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
@@ -28,18 +30,9 @@ public class Activity_Login extends AppCompatActivity {
         final String username,password;
         String password1="123";
         String username1="vader";
-        Bundle bundle=getIntent().getExtras();
-        if(bundle!=null)
-        {
-            username1=bundle.getString("ChangeUsername");
-            password1=bundle.getString("ChangePassword");
-        }
-        else
-        {
-            username1="vader";
-            password1="123";
-        }
-
+        SharedPreferences sharedPreferences=getSharedPreferences("Details",Context.MODE_PRIVATE);
+        username1=sharedPreferences.getString("username","vader");
+        password1=sharedPreferences.getString("password","123");
         username = username1;
         password = password1;
 
@@ -48,10 +41,6 @@ public class Activity_Login extends AppCompatActivity {
             public void onClick(View v) {
                 if (etUsername.getText().toString().equals(username) && etPassword.getText().toString().equals(password)) {
                     Intent login = new Intent(Activity_Login.this, Activity_Welcome.class);
-                    Bundle bundle1=new Bundle();
-                    bundle1.putString("Username",username);
-                    bundle1.putString("Password",password);
-                   login.putExtras(bundle1);
                     startActivity(login);
                     Toast.makeText(getApplicationContext(),"Hello Admin",Toast.LENGTH_LONG).show();
                     finish();
